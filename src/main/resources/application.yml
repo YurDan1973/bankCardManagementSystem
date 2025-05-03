@@ -1,0 +1,8 @@
+db:
+  username: postgres
+  password: postgres
+  driver: PostgresDriver
+  url: postgres:5432
+  hosts: localhost,127.0.0.1
+  spring.jpa.hibernate.ddl-auto: none
+  spring.liquibase.change-log: classpath:db/changelog/db.changelog-master.yaml
