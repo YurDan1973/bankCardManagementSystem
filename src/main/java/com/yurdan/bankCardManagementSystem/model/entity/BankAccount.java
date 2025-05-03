@@ -26,7 +26,7 @@ public class BankAccount extends BaseEntity {
     private String expirationDate;
 
     @Convert(converter = RefundStatusConverter.class)
-    private CardStatus status;
+    private CardStatus cardStatus;
 
     private Long ownerId;
     private String currency;

@@ -19,13 +19,13 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
+                  name: reason
+                  type: TEXT
+              - column:
                   name: status
                   type: VARCHAR(20)
                   constraints:
                     nullable: false
-              - column:
-                  name: reason
-                  type: TEXT
               - column:
                   name: payment_transaction_id
                   type: BIGINT
