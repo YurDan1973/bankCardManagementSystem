@@ -1,6 +1,5 @@
 package com.yurdan.bankCardManagementSystem.model.enums.converter;
 
-
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 import com.yurdan.bankCardManagementSystem.model.enums.RefundStatus;

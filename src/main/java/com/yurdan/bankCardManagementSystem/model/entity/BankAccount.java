@@ -1,5 +1,9 @@
 package com.yurdan.bankCardManagementSystem.model.entity;
 
+import com.yurdan.bankCardManagementSystem.model.enums.CardStatus;
+import com.yurdan.bankCardManagementSystem.model.enums.converter.RefundStatusConverter;
+import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,9 +18,18 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 public class BankAccount extends BaseEntity {
-    private String number;
-    private BigDecimal balance;
-    private Long customerId;
+
+    @Column(unique = true, nullable = false)
+    private String cardNumber;// Далее сделать чтобы он был зашифрованным
+
+    @Column(nullable = false)
+    private String expirationDate;
+
+    @Convert(converter = RefundStatusConverter.class)
+    private CardStatus status;
+
+    private Long ownerId;
     private String currency;
+    private BigDecimal balance;
 
 }
