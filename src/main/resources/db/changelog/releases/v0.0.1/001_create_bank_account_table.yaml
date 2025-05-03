@@ -14,26 +14,36 @@ databaseChangeLog:
                     autoIncrement: true
                     nullable: false
               - column:
-                  name: customer_id
-                  type: BIGINT
-                  constraints:
-                      nullable: false
-              - column:
-                  name: number
+                  name: card_number
                   type: VARCHAR(50)
                   constraints:
                     unique: true
                     nullable: false
               - column:
-                  name: balance
-                  type: DECIMAL(19,4)
+                  name: expiration_date
+                  type: VARCHAR(20)
                   constraints:
-                      nullable: false
+                    nullable: false
+              - column:
+                  name: status
+                  type: VARCHAR(20)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: owner_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
               - column:
                   name: currency
                   type: VARCHAR(3)
                   constraints:
                       nullable: false
+              - column:
+                  name: balance
+                  type: DECIMAL(19,4)
+                  constraints:
+                    nullable: false
               - column:
                   name: created_at
                   type: TIMESTAMP
