@@ -1,8 +1,11 @@
-db:
-  username: postgres
-  password: postgres
-  driver: PostgresDriver
-  url: postgres:5432
-  hosts: localhost,127.0.0.1
-  spring.jpa.hibernate.ddl-auto: none
-  spring.liquibase.change-log: classpath:db/changelog/db.changelog-master.yaml
+spring:
+    datasource:
+      url: jdbc:postgresql://localhost:5432/bank_account
+      username: postgres
+      password: postgres
+      driver-class-name: org.postgresql.Driver
+    jpa:
+        properties.hibernate:
+           show_sql: true
+           format_sql: true
+           liquibase.change-log: classpath:db/changelog/db.changelog-master.yaml
