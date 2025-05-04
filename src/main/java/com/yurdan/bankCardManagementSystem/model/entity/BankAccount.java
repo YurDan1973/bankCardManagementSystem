@@ -5,12 +5,14 @@ import com.yurdan.bankCardManagementSystem.model.enums.converter.CardStatusConve
 import jakarta.persistence.Column;
 import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
+import jdk.jfr.Timestamp;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -23,7 +25,8 @@ public class BankAccount extends BaseEntity {
     private String cardNumber;// Далее сделать чтобы он был зашифрованным
 
     @Column(nullable = false)
-    private String expirationDate;
+    @Timestamp // ?
+    private LocalDateTime expirationDate;
 
     @Convert(converter = CardStatusConverter.class)
     private CardStatus cardStatus;
@@ -31,5 +34,5 @@ public class BankAccount extends BaseEntity {
     private Long ownerId;
     private String currency;
     private BigDecimal balance;
-
+// UUID uuid;
 }

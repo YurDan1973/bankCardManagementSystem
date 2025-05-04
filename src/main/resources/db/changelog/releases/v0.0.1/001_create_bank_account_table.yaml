@@ -21,7 +21,7 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: expiration_date
-                  type: VARCHAR(20)
+                  type: TIMESTAMP
                   constraints:
                     nullable: false
               - column:
