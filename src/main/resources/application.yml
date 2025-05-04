@@ -1,3 +1,9 @@
+#spring.datasource.url=jdbc:postgresql://localhost:5432/your_database
+#spring.datasource.username=your_username
+#spring.datasource.password=your_password
+#spring.jpa.hibernate.ddl-auto=none
+#spring.liquibase.change-log=classpath:db/changelog/db.changelog-master.yaml
+
 spring:
     datasource:
       url: jdbc:postgresql://localhost:5432/bank_account
