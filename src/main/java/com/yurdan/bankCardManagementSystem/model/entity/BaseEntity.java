@@ -18,6 +18,7 @@ public class BaseEntity {
     private Long id;
 
     @CreationTimestamp
+//    Чтобы дата автоматически проставлялась при изменении сущности
     private LocalDateTime createdAt;
 
     @UpdateTimestamp
@@ -25,5 +26,5 @@ public class BaseEntity {
 
     @Version
     private Long version;
-
+// Это поле необходимо для оптимистической блокировки
 }

@@ -1,7 +1,7 @@
 package com.yurdan.bankCardManagementSystem.model.entity;
 
 import com.yurdan.bankCardManagementSystem.model.enums.CardStatus;
-import com.yurdan.bankCardManagementSystem.model.enums.converter.RefundStatusConverter;
+import com.yurdan.bankCardManagementSystem.model.enums.converter.CardStatusConverter;
 import jakarta.persistence.Column;
 import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
@@ -25,7 +25,7 @@ public class BankAccount extends BaseEntity {
     @Column(nullable = false)
     private String expirationDate;
 
-    @Convert(converter = RefundStatusConverter.class)
+    @Convert(converter = CardStatusConverter.class)
     private CardStatus cardStatus;
 
     private Long ownerId;
