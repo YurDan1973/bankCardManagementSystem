@@ -8,17 +8,18 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class BankAccountService {
+public class BankCardService {
     @Autowired
     private  BankAccountRepository bankAccountRepository;
 
     public  List<BankAccount> getAllCards() {
+
         return bankAccountRepository.findAll();
     }
 
-    public  BankAccount createCard(BankAccount card) {
+    public  BankAccount createCard(BankAccount bankAccount) {
         // Логика создания карты (шифрование номера и т.д.)
-        return bankAccountRepository.save(card);
+        return bankAccountRepository.save(bankAccount);
     }
 
     // Другие методы для блокировки, активации и удаления карт
