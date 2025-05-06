@@ -11,12 +11,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/cards")
 public class BankCardController {
-
     @Autowired
     private BankCardService bankCardService;
 
     @GetMapping
     public ResponseEntity<List<BankAccount>> getAllCards() {
+
         return ResponseEntity.ok(bankCardService.getAllCards());
     }
 
