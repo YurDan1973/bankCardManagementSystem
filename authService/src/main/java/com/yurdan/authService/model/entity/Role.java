@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
+@Table(name = "role")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -14,10 +15,12 @@ import lombok.Setter;
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    private RoleName name;
+    @Column(name = "role_name")
+    private RoleName roleName;
 
     public enum RoleName {
         ADMIN, USER

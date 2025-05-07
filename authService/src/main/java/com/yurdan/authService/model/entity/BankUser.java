@@ -9,6 +9,7 @@ import lombok.Setter;
 import java.util.Set;
 
 @Entity
+@Table(name = "bank_user")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -16,9 +17,13 @@ import java.util.Set;
 public class BankUser {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "uuid")
     private String uuid;
 
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "password")
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER)
